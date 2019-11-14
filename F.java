@@ -7,16 +7,11 @@ public class F{
 		printExcercise();
 		printCalculation();
 	}  
-	//打印标题
 	public static  void printHeader() {  
-		System.out.println("********************************************************");
-		System.out.println("*********程序输出50道100以内的加减法运算*******************");
-		System.out.println("******每次运行程序可以得到一套50道题的习题及答案*************");
-		System.out.println("***********************************************************");
-		System.out.println(); 
+		System.out.println("------------------程序输出50道100以内的加减法运算---------------------");
 		System.out.println();
 	}
-	//产生算式
+	//打印标题
 	public static  void generateEquations() {
 		for (int i = 0; i < 50; i++) {
 			int a=(int) (101 * Math.random());
@@ -48,9 +43,9 @@ public class F{
 			}
 		}
 	}
-	//打印题目
+	//产生算式
 	public static void printExcercise() {
-		System.out.println("*************************习题*******************************");
+		System.out.println("------------------习题-----------------------");
 		int j=0;//记录打印算式的个数
 		for (int i = 0; i < 50; i++) {
 			System.out.print("第" + (i+1)+ "题:" + s[i][0] + s[i][2] + s[i][1]+"="+"\t");
@@ -60,10 +55,10 @@ public class F{
 			}
 		}
 	}
-	//打印答案
+	//打印题目
 	public static void printCalculation() {
 		System.out.println();
-		System.out.println("*************************答案*******************************");
+		System.out.println("------------------答案----------------------");
 		int j=0;
 		for (int i = 0; i < 50; i++) {
 			if(s[i][2].equals("+")) {
@@ -80,4 +75,5 @@ public class F{
 			}
 		}	
 	}
+	//打印答案
 }
