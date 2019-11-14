@@ -15,24 +15,24 @@ public class F{
 	public static  void generateEquations() {
 		for (int i = 0; i < 50; i++) {
 			int a=(int) (101 * Math.random());
-			s[i][0] = String.valueOf(a);//生成0~100的随机数
+			s[i][0] = String.valueOf(a);
 			if (a<=50) {
 				int b=(int) (a* Math.random());
-				s[i][1] = String.valueOf(b);//当a<=50时 ，b<a
+				s[i][1] = String.valueOf(b);
 			}else {
 				int b=(int) ((100-a)* Math.random());
-				s[i][1] = String.valueOf(b);//当a>50时，b<100-a
+				s[i][1] = String.valueOf(b);
 			}
-			int o = (int) ((int) (2 * Math.random()));//生成随机数1或2 
+			int o = (int) ((int) (2 * Math.random()));
 			if (o == 1) {
 				s[i][2] = "+";
 			} else {
 				s[i][2] = "-";
 			}
 			int j=0;  
-			String Temp1 = s[i][0] + s[i][2]  + s[i][1];//记录本次产生的算式（正序）
-			String Temp2 = s[i][1] + s[i][2]  + s[i][0];//记录本次产生的算式 (逆序)
-			//判断是否存在重复的算式，如果有则提前跳出循环 即j!=i,则重新产生算式
+			String Temp1 = s[i][0] + s[i][2]  + s[i][1];
+			String Temp2 = s[i][1] + s[i][2]  + s[i][0];
+			
 			for(j = 0;j < i;j++) {
 				if((Temp1 == (s[j][0] + s[j][2]  + s[j][1]))||(Temp2 == (s[j][0] + s[j][2]  + s[j][1]) )){
 					break;
